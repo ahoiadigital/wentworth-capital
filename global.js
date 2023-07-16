@@ -48,12 +48,6 @@ let hamburgerTl = gsap.timeline({
   }
 });
 
-// .main-nav_footer_logo
-
-// .main-nav_links-list
-
-// .main-nav_link
-
 hamburgerTl
   .to(hamburgerLineTop, { y: 10 }, 0)
   .to(hamburgerLineBottom, { y: -10 }, 0)
@@ -95,6 +89,11 @@ mm.add("(max-width: 991px)", () => {
       mainNav.attr("main-nav-state", "closed");
     }
   });
+});
+
+/* Team read more mobile */
+$(".team-member_read-more-button").on("click", function (e) {
+  $(this).parent(".team-member_bio-wrap").toggleClass("is-visible");
 });
 
 gsap.utils.toArray("[ahoia]").forEach((el) => {
